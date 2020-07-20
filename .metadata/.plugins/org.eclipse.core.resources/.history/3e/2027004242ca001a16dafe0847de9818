@@ -1,0 +1,39 @@
+package com.status.running.train;
+
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.util.RouteMatcher.Route;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.train.routing.controller.StationController;
+import com.train.station.service.StationService;
+
+@RunWith(MockitoJUnitRunner.class)
+class TrainRoutingServiceApplicationTests {
+	
+	private static StationService routingService = Mockito.mock(StationService.class);
+	private static StationController routingController = new StationController(routingService);
+
+
+	@Test
+	public void testGetStationById() {
+		
+	}
+	
+	
+	@Test
+	public void testInvalidStationThrowsException() {	
+				
+	}
+	
+	}

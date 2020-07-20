@@ -1,0 +1,47 @@
+package com.status.running.train;
+
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.util.Assert;
+
+import com.train.routing.controller.TrainRoutingController;
+import com.train.routing.entities.Route;
+
+@WebMvcTest(TrainRoutingController.class)
+class TrainRoutingServiceApplicationTests {
+	
+	@Autowired
+	private MockMvc mockMvc;
+	
+	@MockBean
+	private TrainRoutingController service;
+
+	@Test
+	public void testgetAllTrainRoutes() {
+		List<Route> routeList = new ArrayList<>();
+		Route route1 = new Route();
+		route1.setId(100);
+		routeList.add(route1);
+		Route route2 = new Route();
+		routeList.add(route2);
+		routeList.add(route1);
+		routeList.add(route2);
+		when(service.getAllTrainRoutes()).thenReturn(routeList);
+		this.mockMvc.perform(get("/routes")).andDo(print())
+								.andExpect(status().isOk()).andExpect(jsonPath("$.route1.id").value(100)))));
+	}
+	
+}

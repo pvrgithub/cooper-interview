@@ -1,0 +1,57 @@
+package com.train.routing.model;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+@Entity
+public class Route {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ROUTE_ID", nullable = false)
+	private int routeId;
+
+	@Column(name = "TRAIN_NUMBER")
+	private int stationId;
+	
+	@DateTimeFormat(iso = ISO.DATE)
+	private Date createDate;
+
+	@OneToMany(mappedBy = "route")
+	private List<Station> stationList;
+
+	@Column(name = "STATION_SEQ_NUMBER")
+	private int sequenceNumber;
+
+	public int getRouteId() {
+		return routeId;
+	}
+
+	public void setRouteId(int routeId) {
+		this.routeId = routeId;
+	}
+
+	
+	public int getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(int sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "Route [routeId=" + routeId + ", trainId=" + ", sequenceNumber=" + sequenceNumber + "]";
+	}
+}

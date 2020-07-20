@@ -1,0 +1,24 @@
+package com.running.train.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.running.train.entities.RunningTrainStatus;
+import com.running.train.model.TrainScheduler;
+import com.running.train.repository.RailwayTrainRunningRepository;
+
+@Service
+public class RailwayTrainRunningService {
+	
+	private RailwayTrainRunningRepository railwayTrainRunningRepository;
+	
+	public RailwayTrainRunningService(RailwayTrainRunningRepository railwayTrainRunningRepository) {
+		this.railwayTrainRunningRepository = railwayTrainRunningRepository;
+	}
+	
+	public List<RunningTrainStatus> scheduleTrain(TrainScheduler schedular){
+		
+	}
+
+}

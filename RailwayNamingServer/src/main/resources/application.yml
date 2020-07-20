@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: railway-naming-server
+  banner:
+    image:
+      width: 100
+      height: 20
+      location: cooper.gif 
+server:  port: 8761
+  
+eureka:  client:    register-with-eureka: false    fetch-registry: false
+
+  server:    enable-self-preservation: false

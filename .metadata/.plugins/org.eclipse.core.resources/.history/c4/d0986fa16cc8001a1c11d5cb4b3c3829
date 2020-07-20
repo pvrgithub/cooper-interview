@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: "train-monitoring-service"
+    
+server:  port: 7576
+  

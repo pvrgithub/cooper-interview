@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: train-enquiry-service
+    
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888
+      
+  profiles:
+    active:
+    - interview
+    
+server:
+  port: 8586
+  
+eureka:
+  client:
+      service-url:
+        defaultzone: 
+      : "http://localhost:8761/eureka":
+      
+  

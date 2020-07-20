@@ -1,0 +1,12 @@
+package com.status.running.train.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.status.running.train.entities.RunningTrainStatus;
+
+@Repository
+public interface TrainStatusRepository extends JpaRepository<RunningTrainStatus, Long> 
+{	 
+
+}

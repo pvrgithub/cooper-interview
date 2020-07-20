@@ -1,0 +1,47 @@
+package com.train.routing.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Route {
+
+	@Id
+	@Column(name = "Id", nullable = false)
+	private int routeId;
+
+	private int trainId;
+	
+	@OneToMany(orphanRemoval = "true")
+	private List<Station> stationList;
+
+	private int sequenceNumber;
+
+	public int getRouteId() {
+		return routeId;
+	}
+
+	public void setRouteId(int routeId) {
+		this.routeId = routeId;
+	}
+
+	public int getTrainId() {
+		return trainId;
+	}
+
+	public void setTrainId(int trainId) {
+		this.trainId = trainId;
+	}
+
+	public int getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(int sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+}

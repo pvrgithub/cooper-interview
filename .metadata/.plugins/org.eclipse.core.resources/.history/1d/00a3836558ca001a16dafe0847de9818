@@ -1,0 +1,42 @@
+package com.train.entities;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+@Entity
+public class Train {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROUTING_SEQUENCE")
+	private Long id;
+
+	@Column(name = "NAME")
+	private String name;
+
+	@Column(name = "NUMBER_OF_COACHES", length = 10)
+	private int numberOfCoaches;
+
+	@Column(name = "SOURCE_STN_CODE")
+	private String sourceStationCode;
+	
+	@Column(name = "DEST_STN_CODE")
+	private String destinationStationCode;
+	
+	@CreationTimestamp
+	@Column(name = "CREATE_DATE")
+	private Date createDate;
+
+	@UpdateTimestamp
+	@Column(name = "LAST_UPDATED_DATE")
+	private Date lastUpdatedDate;
+
+	
+}

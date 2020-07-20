@@ -1,0 +1,5 @@
+package com.status.running.train.config;
+
+public interface TrainEnquiryProxy {
+	
+}

@@ -1,0 +1,60 @@
+package com.train.routing.service;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.train.routing.contract.APIRoutingService;
+import com.train.routing.delegate.TrainRoutingServiceDelegate;
+import com.train.routing.entities.Route;
+import com.train.routing.repository.TrainRoutingRepository;
+/**
+ * The Service layer that does all the business processing logic by using the
+ * hold of Repository object reference.
+ * 
+ * @author PVR
+ * 
+ * @since 19 / 07 / 2020.
+ */
+@Service
+public class TrainRoutingService implements APIRoutingService {
+
+	private TrainRoutingRepository trainRoutingRepository;
+
+	@Autowired
+	private TrainRoutingServiceDelegate delegate;
+
+	public TrainRoutingService(TrainRoutingRepository trainRoutingRepository) {
+		this.trainRoutingRepository = trainRoutingRepository;
+	}
+
+	public List<Route> getAllTrainRoutes() {
+		return trainRoutingRepository.findAll();
+	}
+
+	public List<String> getStationListByRouteId(int id) {
+		List<Route> routes = trainRoutingRepository.findAllById(Arrays.asList(id));
+		System.out.println(routes);
+		return routes.stream().map(Route::getStationName).collect(Collectors.toList());
+	}
+
+	public List<Route> getRoute(int id) {
+		return (List<Route>) trainRoutingRepository.findById(id).get();
+	}
+
+	public List<Route> newRoute(List<Route> route) {
+		List<Route> resultList = null;
+		if (delegate.isValidStations(route.stream().map(Route::getStationName)
+												.collect(Collectors.toList()))) {
+			resultList = trainRoutingRepository.saveAll(resultList);
+		}
+		return resultList;
+	}
+
+	public void deleteRoute(int id) {
+		trainRoutingRepository.deleteById(id);
+	}
+}

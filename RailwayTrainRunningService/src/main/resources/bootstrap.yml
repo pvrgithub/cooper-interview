@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: railway-running-train-service
+  banner:
+    image:
+      width: 100
+      height: 20
+      location: cooper.gif 
+ ###########Data Source Configuration ##############    
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: Cooper
+    password: password
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+
+#Config server configuration
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888
+      
+  profiles:
+    active:
+    - interview
+  main:
+    allow-bean-definition-overriding: true
+
+#springdoc:
+#  swagger-ui:
+#    path: /train-enquiry-service-swagger-ui.html
+#  show-actuator: true
+#  
+server:
+  port: 8586
+    
+#Naming server configuration
+eureka:
+  client:
+    enabled: true
+    eureka-server-port: 8761
+    webclient:
+      enabled: true
+    eureka-server-u-r-l-context: "/eureka"
+    register-with-eureka: true
+    

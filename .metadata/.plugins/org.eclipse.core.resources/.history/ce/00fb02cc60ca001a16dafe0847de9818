@@ -1,0 +1,33 @@
+package com.status.running.train.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.status.running.train.model.TrainUpdateStatus;
+import com.status.running.train.repository.TrainStatusRepository;
+import com.train.contract.APITrainService;
+import com.train.entities.Train;
+import com.train.repository.TrainRepository;
+/**
+ * The Service layer that does all the business processing logic by using the
+ * hold of Repository object reference.
+ * 
+ * @author PVR
+ * 
+ * @since 20 / 07 / 2020.
+ */
+@Service
+public class RunningTrainStatusUpdateService {
+
+	private TrainStatusRepository trainStatusRepository;
+
+	public RunningTrainStatusUpdateService(TrainStatusRepository trainStatusRepository) {
+		this.trainStatusRepository = trainStatusRepository;
+	}
+	
+	public void postTrainStatus(List<TrainUpdateStatus> updateList) {
+		
+	}
+}

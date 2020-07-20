@@ -1,0 +1,16 @@
+package com.status.running.train.config;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+
+@FeignClient(name = "railway-api-gateway")
+@RibbonClient(name = "train-monitoring-service")
+public interface TrainMonitoringServiceProxy {
+	
+	@GetMapping(value = "/hello/{name}")
+	public String getHello(@PathVariable String name);
+
+}

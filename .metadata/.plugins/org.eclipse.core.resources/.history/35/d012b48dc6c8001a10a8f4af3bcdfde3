@@ -1,0 +1,15 @@
+package com.status.running.train.config;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@Component
+@FeignClient(name = "train-monitoring-service", url = "localhost:7576")
+public interface TrainMonitoringServiceProxy {
+	
+	@GetMapping(value = "/hello/{name}")
+	public String getHello(@PathVariable String name);
+
+}

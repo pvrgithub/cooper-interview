@@ -1,0 +1,24 @@
+package com.train.routing.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Station {
+
+	@Id
+	private int id;
+	
+	@Column(name = "STATION_CODE",length = 3)
+	private String stationCode;
+	
+	private String stationMaster;
+	
+	private int stationContact;
+	
+	private int numberOfPlatforms;
+	
+	
+
+}

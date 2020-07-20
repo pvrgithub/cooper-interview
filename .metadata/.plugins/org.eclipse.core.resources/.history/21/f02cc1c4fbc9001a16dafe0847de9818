@@ -1,0 +1,44 @@
+package com.status.running.train;
+
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.train.routing.controller.TrainRoutingController;
+import com.train.routing.entities.Route;
+import com.train.routing.service.TrainRoutingService;
+
+@RunWith(MockitoJUnitRunner.class)
+class TrainRoutingServiceApplicationTests {
+	
+	@Mock
+	private TrainRoutingService routingService;
+	
+	@InjectMocks
+	private TrainRoutingController routingController;
+
+	@Test
+	public void testGetAllTrainRoutes() {
+		List<Route> route = new ArrayList<>();
+		Route route1 = new Route();
+		route1.setRouteId(100);
+		route1.setSeqNumber(1);
+		route1.setStationName("CHN");
+		route.add(route1);
+		when(routingService.getAllTrainRoutes()).thenReturn(route);
+		List<Route> receivedRoutes = routingController.getAllTrainRoutes();
+		Assert.assertTrue(receivedRoutes.get(0).getStationName().equals("CHN"));
+		Assert.assertTrue(receivedRoutes.get(0).getSeqNumber() == 1);
+		Assert.assertTrue(receivedRoutes.get(0).getRouteId() == 100);
+	}
+	
+}

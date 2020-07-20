@@ -1,0 +1,17 @@
+1595228612689	Rename package 'com.train.station'
+1595228639483	Rename type 'StationServiceApplication'
+1595228646618	Delete element
+1595228758127	Rename package 'com.train.station.contract'
+1595228774028	Rename package 'com.train.station.controller'
+1595228781937	Rename package 'com.train.station.entities'
+1595228789685	Rename package 'com.train.station.exception'
+1595228800342	Rename package 'com.train.station.repository'
+1595228808249	Rename package 'com.train.station.service'
+1595228830118	Rename type 'APIStationService'
+1595228890453	Rename type 'StationController'
+1595228905150	Rename type 'Station'
+1595228924853	Rename type 'SubjectRepository'
+1595228941485	Rename type 'StationService'
+1595229441636	Rename type 'TrainEnquiryApiServiceApplicationTests'
+1595229801391	Rename type 'TrainService'
+1595273334380	Copy compilation unit

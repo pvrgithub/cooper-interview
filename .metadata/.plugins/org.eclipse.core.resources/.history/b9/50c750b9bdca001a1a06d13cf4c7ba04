@@ -1,0 +1,5 @@
+package com.running.train.delegate;
+
+public class RailwayTrainRunningDelegate {
+
+}

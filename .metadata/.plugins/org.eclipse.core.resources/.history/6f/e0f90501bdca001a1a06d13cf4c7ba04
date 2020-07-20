@@ -1,0 +1,24 @@
+package com.running.train.proxy;
+
+import java.util.List;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * @author RAJASEKAR PV
+ * 
+ * @since 19 / 07 / 2020
+ * 
+ * This Proxy feign client is used for interservice communication.
+ */
+@FeignClient(name = "railway-api-gateway-server")
+@RibbonClient(name = "train-routing-service")
+public interface RoutingServiceProxy {
+
+	@GetMapping(value = "/train-routing/service/route/{routeId}")
+	public List<Route> getRoute(@PathVariable int routeId);
+}
+
+

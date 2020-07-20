@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "train-routing-service"
+  banner:
+    image:
+      width: 100
+      height: 20
+      location: cooper.gif
+      datasource:    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: Cooper
+    password: password    driver-class-name: oracle.jdbc.OracleDriver  jpa:    show-sql: true
+          
+server:  port: 7576
+  
+#Naming server configuration
+eureka:
+  client:
+    enabled: true
+    eureka-server-port: 8761
+    webclient:
+      enabled: true
+    eureka-server-u-r-l-context: "/eureka"
+    register-with-eureka: true

@@ -1,0 +1,8 @@
+package com.status.running.train.model;
+
+
+public class TrainUpdateStatus {
+
+	private int trainNumber;
+
+}

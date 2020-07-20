@@ -1,0 +1,82 @@
+package com.running.train.entities;
+
+import java.sql.Date;
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Trip {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROUTING_SEQUENCE")
+	@Column(name = "TRIP_ID")
+	private int id;
+	
+	@Column(name = "JOURNEY_DATE")
+	private Date journeyDate;
+	
+	@Column(name = "TRAIN_ID")
+	private int trainId;
+
+	@Column(name = "ROUTE_ID")
+	private int routeId;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getTripId() {
+		return tripId;
+	}
+
+	public void setTripId(int tripId) {
+		this.tripId = tripId;
+	}
+
+	public int getTrainId() {
+		return trainId;
+	}
+
+	public void setTrainId(int trainId) {
+		this.trainId = trainId;
+	}
+
+	public String getStationName() {
+		return stationName;
+	}
+
+	public void setStationName(String stationName) {
+		this.stationName = stationName;
+	}
+
+	public Timestamp getArrivedTime() {
+		return arrivedTime;
+	}
+
+	public void setArrivedTime(Timestamp arrivedTime) {
+		this.arrivedTime = arrivedTime;
+	}
+
+	public Timestamp getDepartureTime() {
+		return departureTime;
+	}
+
+	public void setDepartureTime(Timestamp departureTime) {
+		this.departureTime = departureTime;
+	}
+
+	@Override
+	public String toString() {
+		return "RunningTrainStatus [id=" + id + ", tripId=" + tripId + ", trainId=" + trainId + ", stationName="
+				+ stationName + ", arrivedTime=" + arrivedTime + ", departureTime=" + departureTime + "]";
+	}
+}

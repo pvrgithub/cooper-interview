@@ -1,0 +1,5 @@
+train-update-service:
+  rabbitmq:
+    queueName: ""
+    exchangeName: "" 
+    routingKey: ""

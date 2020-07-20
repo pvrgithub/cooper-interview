@@ -1,0 +1,13 @@
+package com.running.train.model;
+
+import java.sql.Timestamp;
+
+public class TrainScheduler {
+	
+	private int trainNumber;
+	
+	private int routeId;
+	
+	private Timestamp departureTime;
+
+}

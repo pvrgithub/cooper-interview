@@ -1,0 +1,19 @@
+package com.running.train.status.receiver;
+
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Service;
+
+import com.running.train.config.MQProperties;
+
+
+@Service
+public class TrainRunningStatusReceiver {
+	
+	private MQProperties mqProperties;
+
+	@RabbitListener(queues = "${train-running-service.rabbitmq.queueName}")
+	public void receiveTrainUpdateStatus(Message message) {
+		System.out.println("Received Successfully : " + message);
+	}
+}

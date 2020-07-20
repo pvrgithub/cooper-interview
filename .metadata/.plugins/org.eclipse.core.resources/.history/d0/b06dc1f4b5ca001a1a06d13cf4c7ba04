@@ -1,0 +1,11 @@
+package com.running.train.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/train")
+public class RailwayTrainRunningController {
+	
+	public List<Running>
+	
+
+}

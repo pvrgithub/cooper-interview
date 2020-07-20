@@ -1,0 +1,8 @@
+package com.running.train.proxy;
+
+public interface RoutingServiceProxy {
+
+}
+
+
+

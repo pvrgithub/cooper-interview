@@ -1,0 +1,42 @@
+package com.status.running.train.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MQProperties {
+
+	@Value("${train-update-service.rabbitmq.queueName}")
+    private String queueName;
+	
+	@Value("${train-update-service.rabbitmq.exchangeName}")
+    private String exchangeName;
+	
+	@Value("${train-update-service.rabbitmq.routingKey}")
+    private String routingKey;
+
+    public String getQueueName() {
+        return queueName;
+    }
+
+    public void setQueueName(String queueName) {
+        this.queueName = queueName;
+    }
+
+    public String getExchangeName() {
+        return exchangeName;
+    }
+
+    public void setExchangeName(String exchangeName) {
+        this.exchangeName = exchangeName;
+    }
+
+    public String getRoutingKey() {
+        return routingKey;
+    }
+
+    public void setRoutingKey(String routingKey) {
+        this.routingKey = routingKey;
+    }
+}

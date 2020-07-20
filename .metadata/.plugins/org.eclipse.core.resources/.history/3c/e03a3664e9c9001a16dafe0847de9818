@@ -1,0 +1,58 @@
+package com.train.routing.response.model;
+
+import java.util.Date;
+
+public class Route {	
+	
+	private int ID;
+	
+	private String STATION_NAME;	
+	
+	private Date CREATE_DATE;
+	
+	private Date LAST_UPDATED_DATE;
+	
+	private int SEQ_NUMBER;
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public String getSTATION_NAME() {
+		return STATION_NAME;
+	}
+
+	public void setSTATION_NAME(String sTATION_NAME) {
+		STATION_NAME = sTATION_NAME;
+	}
+
+	public Date getCREATE_DATE() {
+		return CREATE_DATE;
+	}
+
+	public void setCREATE_DATE(Date cREATE_DATE) {
+		CREATE_DATE = cREATE_DATE;
+	}
+
+	public Date getLAST_UPDATED_DATE() {
+		return LAST_UPDATED_DATE;
+	}
+
+	public void setLAST_UPDATED_DATE(Date lAST_UPDATED_DATE) {
+		LAST_UPDATED_DATE = lAST_UPDATED_DATE;
+	}
+
+	public int getSEQ_NUMBER() {
+		return SEQ_NUMBER;
+	}
+
+	public void setSEQ_NUMBER(int sEQ_NUMBER) {
+		SEQ_NUMBER = sEQ_NUMBER;
+	}
+
+	
+}

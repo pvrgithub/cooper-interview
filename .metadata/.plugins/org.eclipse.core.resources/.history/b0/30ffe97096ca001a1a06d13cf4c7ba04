@@ -1,0 +1,49 @@
+#spring:
+#  application:
+#    name: train-enquiry-service
+#    
+##Config server configuration
+#  cloud:
+#    config:
+#      uri:
+#      - http://localhost:8888
+#      
+#  profiles:
+#    active:
+#    - interview
+#    
+#server:
+#  port: 8586
+#
+##Naming server configuration
+#eureka:
+#  client:
+#    enabled: true
+#    eureka-server-port: 8761
+#    webclient:
+#      enabled: true
+#    eureka-server-u-r-l-context: "/eureka"
+#    
+#springdoc:
+#  swagger-ui:
+#    path: /train-enquiry-service-swagger-ui.html
+#  show-actuator: true
+#  
+
+
+server:
+  port: 5556
+spring:
+  application:
+    name: train-running-status-update-service
+
+    
+#Naming server configuration
+eureka:
+  client:
+    enabled: true
+    eureka-server-port: 8761
+    webclient:
+      enabled: true
+    eureka-server-u-r-l-context: "/eureka"
+    register-with-eureka: true

@@ -1,0 +1,49 @@
+package com.status.running.train.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * Read the properties from the Config server
+ * 
+ * @author RAJASEKAR PV
+ * 
+ * @since 20 / 07 / 2020
+ *
+ */
+@Configuration(value = "")
+public class MQProperties {
+
+	@Value("${rabbitmq.queueName}")
+    private String queueName;
+	
+	@Value("${rabbitmq.exchangeName}")
+    private String exchangeName;
+	
+	@Value("${rabbitmq.routingKey}")
+    private String routingKey;
+
+    public String getQueueName() {
+        return queueName;
+    }
+
+    public void setQueueName(String queueName) {
+        this.queueName = queueName;
+    }
+
+    public String getExchangeName() {
+        return exchangeName;
+    }
+
+    public void setExchangeName(String exchangeName) {
+        this.exchangeName = exchangeName;
+    }
+
+    public String getRoutingKey() {
+        return routingKey;
+    }
+
+    public void setRoutingKey(String routingKey) {
+        this.routingKey = routingKey;
+    }
+}

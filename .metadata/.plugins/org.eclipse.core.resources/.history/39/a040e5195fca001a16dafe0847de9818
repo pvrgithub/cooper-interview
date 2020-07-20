@@ -1,0 +1,30 @@
+package com.status.running.train.entities;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class RunningTrainStatus {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROUTING_SEQUENCE")
+	private Long id;
+	
+	@Column(name = "TRAIN_NUMBER")
+	private int trainNumber;
+	
+	@Column(name = "STATION_CODE")
+	private String stationCode;
+	
+	@Column(name = "ARRIVED_TIME")
+	private Timestamp arrivalTime;	
+	
+	@Column(name = "DEPARTURE_TIME")
+	private Timestamp departureTime;
+
+}

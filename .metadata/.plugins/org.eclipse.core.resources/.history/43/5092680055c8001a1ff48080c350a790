@@ -1,0 +1,7 @@
+package com.status.running.train.model;
+
+public class Enquiry {
+
+	private int trainNumber;
+
+}

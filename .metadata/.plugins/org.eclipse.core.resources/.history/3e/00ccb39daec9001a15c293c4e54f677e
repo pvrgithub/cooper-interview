@@ -1,0 +1,5 @@
+package com.train.routing.contract;
+
+public class APIRoutingService {
+
+}

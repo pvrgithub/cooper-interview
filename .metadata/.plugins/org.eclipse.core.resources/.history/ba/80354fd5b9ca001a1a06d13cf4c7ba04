@@ -1,0 +1,27 @@
+package com.running.train.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.running.train.entities.RunningTrainStatus;
+import com.running.train.service.RailwayTrainRunningService;
+
+@RestController("/train")
+public class RailwayTrainRunningController {
+	@Autowired
+	private RailwayTrainRunningService railwayTrainRunningService;
+	
+	public RailwayTrainRunningController(RailwayTrainRunningService railwayTrainRunningService) {
+		this.railwayTrainRunningService = railwayTrainRunningService;
+	}
+	
+	
+	@PostMapping("schedule")
+	public List<RunningTrainStatus> scheduleTrain(){
+		
+	}
+
+}

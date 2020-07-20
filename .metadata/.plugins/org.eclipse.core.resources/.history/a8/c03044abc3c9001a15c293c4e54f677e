@@ -1,0 +1,5 @@
+package com.train.routing.delegate;
+
+public class TrainRoutingServiceDelegate {
+
+}

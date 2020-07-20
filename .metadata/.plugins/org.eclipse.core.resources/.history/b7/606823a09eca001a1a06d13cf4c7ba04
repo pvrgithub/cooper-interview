@@ -1,0 +1,43 @@
+package com.status.running.train.model;
+
+import java.sql.Timestamp;
+
+public class TrainUpdateStatus {
+	private int trainNumber;
+	private int routeNumber;
+	private int stationName;
+	private Timestamp arrivedTime;
+	private Timestamp departureTime;
+	
+	
+	public int getStationName() {
+		return stationName;
+	}
+	public void setStationName(int stationName) {
+		this.stationName = stationName;
+	}
+	public int getTrainNumber() {
+		return trainNumber;
+	}
+	public void setTrainNumber(int trainNumber) {
+		this.trainNumber = trainNumber;
+	}
+	public int getRouteNumber() {
+		return routeNumber;
+	}
+	public void setRouteNumber(int routeNumber) {
+		this.routeNumber = routeNumber;
+	}
+	public Timestamp getArrivedTime() {
+		return arrivedTime;
+	}
+	public void setArrivedTime(Timestamp arrivedTime) {
+		this.arrivedTime = arrivedTime;
+	}
+	public Timestamp getDepartureTime() {
+		return departureTime;
+	}
+	public void setDepartureTime(Timestamp departureTime) {
+		this.departureTime = departureTime;
+	}
+}

@@ -1,0 +1,16 @@
+package com.running.train.delegate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.running.train.proxy.RoutingServiceProxy;
+
+@Component
+public class RailwayTrainRunningDelegate {
+	
+	@Autowired
+	private RoutingServiceProxy routingServiceProxy;
+	
+	
+	
+}

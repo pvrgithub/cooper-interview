@@ -1,0 +1,13 @@
+package com.running.train.proxy;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.running.train.model.Train;
+
+public interface TrainServiceProxy {
+	
+	@GetMapping("/train/{id}")
+	public Train getTrainById(@PathVariable Long id);
+
+}

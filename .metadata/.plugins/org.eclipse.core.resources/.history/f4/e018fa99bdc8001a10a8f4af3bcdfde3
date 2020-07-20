@@ -1,0 +1,13 @@
+package com.status.railway.gateway;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RailwayGatewayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RailwayGatewayApplication.class, args);
+	}
+
+}
