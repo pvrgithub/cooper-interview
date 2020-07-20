@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: train-enquiry-service
-    
-spring.cloud.con

@@ -1,8 +1,0 @@
-package com.running.train.delegate;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class RailwayTrainRunningDelegate {
-	
-}

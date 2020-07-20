@@ -1,5 +1,0 @@
-package com.running.train.status.receiver;
-
-public class TrainRunningStatusReceiver {
-
-}

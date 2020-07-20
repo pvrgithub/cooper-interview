@@ -1,9 +1,0 @@
-package com.running.train.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.running.train.entities.RunningTrainStatus;
-
-public interface RailwayTrainRunningRepository extends JpaRepository<RunningTrainStatus, Integer> {
-	
-}

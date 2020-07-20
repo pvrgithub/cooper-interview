@@ -1,16 +1,0 @@
-spring:
-  application:
-    name: "train-monitoring-service"
-    
-server:  port: 7576
-  
-#Naming server configuration
-eureka:
-  client:
-    enabled: true
-    eureka-server-port: 8761
-    webclient:
-      enabled: true
-    eureka-server-u-r-l-context: "/eureka"
-    register-with-eureka: true
-  

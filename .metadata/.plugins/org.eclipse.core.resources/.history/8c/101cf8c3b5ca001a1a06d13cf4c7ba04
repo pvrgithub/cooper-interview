@@ -1,9 +1,0 @@
-package com.running.train.controller;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController("/schedule/train")
-public class RailwayTrainRunningController {
-	
-
-}

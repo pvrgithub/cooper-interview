@@ -1,6 +1,0 @@
---- 
-train-update-service: 
-  rabbitmq: 
-    exchangeName: train-status-Exchange
-    queueName: trainStatusUpdateQueue
-    routingKey: train-routing-key

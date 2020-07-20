@@ -1,7 +1,0 @@
-package com.status.running.train.config;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-public interface TrainEnquiryProxy {
-	
-}
