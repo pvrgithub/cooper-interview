@@ -1,5 +1,6 @@
-train-update-service:
- rabbitmq: 
-  queueName: "trainStatusUpdateQueue"
-  exchangeName: "train-status-Exchange" 
-  routingKey: "train-routing-key"
+--- 
+train-update-service: 
+  rabbitmq: 
+    exchangeName: train-status-Exchange
+    queueName: trainStatusUpdateQueue
+    routingKey: train-routing-key
